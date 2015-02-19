@@ -1,0 +1,49 @@
+<html>
+	<head> 
+		<title>
+			Static Tweet feed
+		</title>
+		<link href="myStyle.css" type="text/css" rel="stylesheet" />
+		<script src="jquery-2.1.1.js"></script>
+		
+		<script src="app.js"></script>
+		<script>
+			$(document).ready(app_load);
+		</script>
+	</head>
+	<body>
+		<table id="tweetTemplate" style="display: None;">
+			<tr>
+				<td>
+					<span id="profile_picture_span">
+						<img id="profile_picture" alt="" src="" onError="this.onError=null;this.src='user.png'"/>
+					</span>
+				</td>
+				<td>
+					<span id="tweet">
+						
+					</span>
+				</td>
+			</tr>
+		</table>
+		<div id="baseDiv">
+			<table>
+				<tr>
+					<td colspan=2>
+						<h1 id="tickerHeader">Tweet ticker</h2>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="mainDiv">
+						</div>
+					</td>
+					<td>
+						<div id="hashTagDiv">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

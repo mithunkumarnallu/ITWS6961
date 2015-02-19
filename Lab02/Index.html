@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+		<title>My weather app!</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/ie-emulation-modes-warning.js"></script><style type="text/css"></style>
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script>
+		<script src = "js/app.js"></script>
+		<script>
+			$(document).ready(loadWeatherData)
+		</script>
+		
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">My Weather app</a>
+			</div>
+		  </div>
+		</nav>
+		
+		<div class="container alert alert-danger alert-error" style="margin-top: 5%" id="error">
+		</div>
+		<!-- Begin page content -->
+		<div class="container" style="margin-top: 5%" id="container">
+			<div class="preload"></div>
+			<div class= "row">
+				<div class="panel panel-default col-md-6" >
+					<div class="panel-body" style="min-height: 270px;">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 id="city">Troy, NY</h2>
+							</div>
+							<div class="col-md-2">
+								<div class="list-inline">
+									<a href="#" class="list-inline-item">° C</a>
+									<!--<a href="#" class="list-inline-item">° F</a>-->
+								</div>
+							</div>
+						</div>
+						<h4 id="dayTime"></h4>
+						<div class="col-md-7">
+							<div class="row" style="display: block; clear: left;">	
+								<div style="float: left">
+									<img id="weatherImg" height=60px width=60px src=""/>
+								</div>
+								<div>
+									<h1 id="temp">-6</h1>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="row" style="display: block">
+								<h5 class="text-muted">Temperature min: <span id="tempMin"></span></h5>
+							</div>
+							<div class="row">
+								<h5 style="margin-top:0" class="text-muted">Temperature max: <span id="tempMax">-5.1</span></h5> 
+							</div>
+							<div class="row">
+								<h5 style="margin-top:0" class="text-muted">Humidity: <span id="humidity">-5.1</span></h5> 
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6" >
+					<div id="mapHolder" style="height: 270px; padding-left:10px;">
+					
+					</div>
+				</div>
+			</div>  	  
+		</div>
+
+		<footer class="footer">
+		  <div class="container">
+			<p class="text-muted">Built by <a href="http:///www.linkedin.com/pub/mithun-kumar-nallu/24/700/567/en" target="_blank">Mithun Nallu</a></p>
+		  </div>
+		</footer>
+
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="./js/ie10-viewport-bug-workaround.js"></script>
+	  
+
+		<script type="text/javascript">(function () {
+			return window.SIG_EXT = {};
+		})()</script>
+	</body>
+</html>
