@@ -1,12 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		
 		<title>
 			Static Tweet feed
 		</title>
-		<link href="myStyle.css" type="text/css" rel="stylesheet" />
-		<script src="jquery-2.1.1.js"></script>
+		<link href="static/css/myStyle.css" type="text/css" rel="stylesheet" />
+		<script src="js/jquery-2.1.1.js"></script>
 		
-		<script src="app.js"></script>
+		<script src="js/app.js"></script>
 		<script>
 			$(document).ready(app_load);
 		</script>
@@ -16,7 +20,7 @@
 			<tr>
 				<td>
 					<span id="profile_picture_span">
-						<img id="profile_picture" alt="" src="" onError="this.onError=null;this.src='user.png'"/>
+						<img id="profile_picture" alt="" src="" onError="this.onError=null;this.src='static/images/user.png'"/>
 					</span>
 				</td>
 				<td>
