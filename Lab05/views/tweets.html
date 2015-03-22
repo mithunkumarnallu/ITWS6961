@@ -1,0 +1,61 @@
+<html>
+	<head> 
+		<title>
+			Static Tweet feed
+		</title>
+		<link href="/static/style/myStyle.css" type="text/css" rel="stylesheet" />
+		<script src="/javascript/jquery-2.1.1.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+		<script src="/javascript/app_lab5.js"></script>
+		<script>
+			$(document).ready(renderTweets(20));
+		</script>
+		
+	</head>
+	<body ng-app="twitterTicker" >
+		<table id="tweetTemplate" style="display: None;">
+			<tr>
+				<td>
+					<span id="profile_picture_span">
+						<img id="profile_picture" alt="" src="" onError="this.onError=null;this.src='/static/images/user.png'"/>
+					</span>
+				</td>
+				<td>
+					<span id="tweet">
+						
+					</span>
+				</td>
+			</tr>
+		</table>
+		<div ng-controller="TwitterTickerController as tweetController">
+			Tweet count: 
+			<input type="text" name="tweetCount" ng-model="tweetController.count"
+				ng-trim="false"></input>
+			
+			<button ng-click="tweetController.getTweets(tweetController.count)" ng-pattern="tweetController.format">
+				Get Tweets!
+			</button>
+			<div>Now showing <span ng-bind="tweetController.tweetsExtracted"></span> Tweets!</div>
+		</div>	
+		<div id="baseDiv">
+			<table>
+				<tr>
+					<td colspan=2>
+						<h1 id="tickerHeader">Tweet ticker</h2>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="mainDiv">
+						</div>
+					</td>
+					<td>
+						<div id="hashTagDiv">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

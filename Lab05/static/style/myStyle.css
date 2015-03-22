@@ -1,0 +1,69 @@
+#mainDiv {
+	height: 22em; overflow: hidden; width: 50em; margin: 0em 2em 2em 7em;
+}
+
+#baseDiv {
+	height: 31em; width: 90em; margin: 2em 2em 2em 2em;
+	background-color: grey
+}
+#tickerHeader {
+	display: block; 
+	text-align: center;
+}
+
+#mainDiv img {
+	height: 3em; border-radius: 50%; margin: 6px
+}
+
+#mainDiv #tweet {
+	color: blue; font-family: "calibri"; 
+}
+
+#mainDiv div {
+	border-color: lightblue; border-style: solid; background-color: whitesmoke;
+	height: 4em;
+}
+
+#hashTagDiv {
+	height: 22em; overflow: hidden; width: 22em; margin: 0em 0em 2em 0.2em; border-color: skyblue; border-style: outset  
+}
+
+#hashTagDiv div {
+	border-color: white; border-style: solid; background-color: skyblue;
+	height: 2.2em; color: white; font-family: "calibri"; 
+}
+
+#mainDiv h1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	z-index: 0;
+	-webkit-animation: testAnimation 4s linear infinite 0s;
+	animation: testAnimation 4s linear infinite;
+	-webkit-animation-delay: 0s;	
+}
+			
+@-webkit-keyframes testAnimation { 
+	0% { opacity: 0;
+	-webkit-animation-timing-function: ease-in; }
+	10% { opacity: 1;
+		 -webkit-animation-timing-function: ease-in; }
+	25% { opacity: 1 }
+	50% { opacity: 1 }
+	
+	80% { opacity: 0; -webkit-animation-timing-function: ease-out;}
+	100% { opacity: 0 }
+}
+
+@keyframes testAnimation { 
+	0% { opacity: 0;
+	animation-timing-function: ease-in; }
+	8% { opacity: 1;
+		 animation-timing-function: ease-out; }
+	17% { opacity: 1 }
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}
